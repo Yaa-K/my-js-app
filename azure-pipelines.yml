@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  name: SelfHostedPool
+
+steps:
+- script: uname -a
+  displayName: 'Show OS Info'
+
+- script: whoami
+  displayName: 'Show Current User'
+
+- script: df -h
+  displayName: 'Show Disk Space'
